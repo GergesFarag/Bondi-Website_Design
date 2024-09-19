@@ -5,4 +5,7 @@
 
 ## Technologies Used
 
-**HTML , CSS and Bootstrap** 
+**. HTML**
+**. CSS**
+**. Bootstrap**
+-------------------------------------------------------------------
