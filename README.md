@@ -2,3 +2,7 @@
 -> It's a simple single page website design for bondi website 
 
 -> Responsive for all screen sizes
+
+## Technologies Used
+
+**HTML , CSS and Bootstrap** 
