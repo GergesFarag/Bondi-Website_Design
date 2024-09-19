@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+:root{
+    --dark-color : #19283f;
+    --ment-color: #02bcb7;
+    --red-color : #ff3150;
+    --yellow-color: #ffc400;
+    --light-ment : #eff7fa;
+}
+
+/*Header*/
+.navbar{
+    background-color: var(--dark-color) !important;
+    z-index: 3000;
+}
+.btn.rounded-pill{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    position: relative;
+    font-weight: 300;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+    border: 1px solid white;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    color: var(--yellow-color) !important;
+    transition: 0.6s ease;
+}
+button.rounded-pill:hover{
+    background-color: rgb(180, 38, 59);
+    transition: 0.6s ease;
+}
+.search{
+    color: var(--ment-color);
+    border-left: 1px solid var(--ment-color);
+    padding-left: 1.2rem;
+}
+
+/*Landing Section*/
+
+.landing-page{
+    height: calc(70vh - 70px);
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.landing-page .container h1{
+    font-weight: 400;
+}
+
+/*Skills Section*/
+.main-title{
+    margin-bottom: 8rem;
+}
+.main-title p{
+    border-bottom: 1px solid var(--ment-color);
+    display: inline-block;
+}
+.container .skill-number {
+    counter-reset: count;
+}
+.container .skill-number .feat .skill-icon{
+    font-size: 3.2rem;
+    color: var(--ment-color);
+    position: relative;
+    counter-increment: count;
+    z-index: 1500;
+}
+.container .skill-number .feat .skill-icon:before{
+    content: counter(count);
+    position:absolute;
+    top: -16rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    background: linear-gradient(180deg, #e4e4e4 20%  , transparent 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; 
+    font-weight:900;
+    font-size: 17rem;
+}
+.skill-icon + h4{
+    color: var(--yellow-color);
+}
+
+/*Work Section*/
+
+.work-page{
+    background-color: var(--light-ment);
+}
+.work-page .list-unstyled li a{
+    transition: 0.5s ease;
+}
+.work-page .list-unstyled li a:hover {
+    font-size: larger;
+}
+.work-component{
+    width: 300px;
+    height: 165px;
+    perspective: 1500px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.work-box{
+    height: 165px;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    transform-origin: left center;
+}
+.work-box:hover{
+    transform: rotateY(180deg) translateX(-100%);
+}
+.work-box .face{
+    position:absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    color: white;
+}
+.back{
+    background-color: #02bcb7;
+    transform: rotateY(180deg);
+}
+
+/*Stuff Section*/
+.stuff-page .para{
+    max-width: 700px;
+} 
+
+/*Team Section*/
+.team-page{
+    background-color: var(--light-ment);
+}
+.team-page .container .row > h2{
+    color: var(--yellow-color);
+}
+.team-page .container .row .para{
+    max-width: 900px;
+}
+.team-page .container .team-card{
+    width: 250px;
+}
+.team-card *:nth-child(2){
+    background-color: var(--ment-color);
+    color: var(--yellow-color);
+    font-weight: normal;
+}
+
+/*Start Section*/
+.start-page{
+    background: url(../imgs/wallp.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color:var(--yellow-color)
+}
+
+/*Blog Section*/
+.blog-page .blog-card{
+    width: 350px;
+    margin: 0 auto;
+}
+/*Sub Section*/
+.sub-page {
+    background-color: var(--yellow-color);
+    color: var(--dark-color);
+}
+.sub-page .container .content .col-lg-7 input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(72, 72, 72);
+    background-color: transparent;
+    border-radius: 5px;
+    caret-color: #19283f;
+    margin-bottom: 10px;
+}
+.sub-page .container .content .col-lg-7 input::placeholder{
+    color: var(--dark-color);
+}
+
+/*Footer*/
+
+footer{
+    background-color: var(--dark-color);
+    padding: 10px;
+}
+footer span{
+    color: var(--yellow-color);
+}
